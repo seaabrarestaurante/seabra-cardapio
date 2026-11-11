@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow,noarchive">
+<title>Seabra Restaurante | Painel Interno</title>
+<style>
+:root{--bg:#151311;--panel:#211d1a;--panel2:#2a231f;--gold:#d99a3c;--cream:#f5eee3;--muted:#bcb4aa;--green:#198754;--blue:#0d6efd;--purple:#6f42c1;--orange:#fd7e14;--red:#dc3545;--border:#5d4b40}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:#fff}button,input,select{font:inherit}.wrap{max-width:1180px;margin:auto;padding:18px}.top{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:16px}.brand h1{margin:0;font-size:24px}.brand p{margin:4px 0 0;color:var(--muted);font-size:13px}.card{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:16px}.login{max-width:430px;margin:10vh auto}.login input{width:100%;padding:13px;border-radius:10px;border:1px solid #70584b;background:#fff;color:#222;margin:10px 0}.btn{border:0;border-radius:10px;padding:11px 14px;font-weight:700;cursor:pointer}.primary{background:var(--gold);color:#21140d}.secondary{background:#3a2f29;color:#fff;border:1px solid #6b5549}.danger{background:#5c2424;color:#fff}.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:12px 0}.toolbar button.active{background:var(--gold);color:#21140d}.summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:12px 0}.metric{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:14px}.metric b{font-size:24px;display:block}.metric span{font-size:12px;color:var(--muted)}.orders{display:grid;gap:12px}.order{background:var(--panel);border:1px solid var(--border);border-radius:16px;padding:14px}.order-head{display:flex;gap:10px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}.order-title{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.badge{padding:5px 9px;border-radius:999px;font-size:12px;font-weight:800}.muted{color:var(--muted);font-size:13px}.details{display:grid;grid-template-columns:1.2fr 1fr;gap:12px;margin-top:12px}.items{background:#181310;border-radius:12px;padding:10px}.items ul{margin:8px 0 0;padding-left:18px}.items li{margin:5px 0}.status-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.status-box{background:var(--panel2);border-radius:12px;padding:10px}.status-box label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}.status-box select{width:100%;padding:10px;border-radius:9px;border:1px solid #70584b;background:#fff;color:#222}.total{font-size:18px;font-weight:800;margin-top:10px}.empty{text-align:center;color:var(--muted);padding:40px 10px}.error{color:#ff9b8f;font-size:13px;margin-top:8px}.ok{color:#8fd19e;font-size:13px}.hidden{display:none!important}.refresh{font-size:12px;color:var(--muted)}
+@media(max-width:760px){.summary{grid-template-columns:repeat(2,1fr)}.details{grid-template-columns:1fr}.status-grid{grid-template-columns:1fr}.wrap{padding:12px}.brand h1{font-size:20px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section id="dashboardView">
+    <div class="top">
+      <div class="brand"><h1>Seabra Restaurante — Painel</h1><p>Cozinha, caixa e entrega em um só lugar</p><p style="color:#f1b55b">Acesso interno temporariamente sem PIN</p></div>
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+        <span id="refreshInfo" class="refresh"></span>
+        <button class="btn secondary" onclick="loadOrders()">Atualizar</button>
+      </div>
+    </div>
+
+    <div class="summary">
+      <div class="metric"><b id="mTotal">0</b><span>Pedidos hoje</span></div>
+      <div class="metric"><b id="mPrep">0</b><span>Aguardando / em preparo</span></div>
+      <div class="metric"><b id="mPay">0</b><span>Pagamento pendente</span></div>
+      <div class="metric"><b id="mDeliver">0</b><span>Aguardando entrega/retirada</span></div>
+    </div>
+
+    <div class="toolbar">
+      <button class="btn secondary active" data-filter="todos" onclick="setFilter('todos',this)">Todos</button>
+      <button class="btn secondary" data-filter="cozinha" onclick="setFilter('cozinha',this)">Cozinha</button>
+      <button class="btn secondary" data-filter="caixa" onclick="setFilter('caixa',this)">Caixa</button>
+      <button class="btn secondary" data-filter="entrega" onclick="setFilter('entrega',this)">Entrega</button>
+      <button class="btn secondary" data-filter="prontos" onclick="setFilter('prontos',this)">Prontos</button>
+    </div>
+    <div id="globalMsg"></div>
+    <div id="orders" class="orders"></div>
+  </section>
+</div>
+<script>
+const WORKER='https://pagbanktoken.seabrarestauranteba-27c.workers.dev';
+const PANEL_LIVE=['seabrarestaurante.net','www.seabrarestaurante.net'].includes(location.hostname);
+let orders=[]; let filter='todos'; let timer=null;
+const BRL=c=>Number(c||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL',minimumFractionDigits:2,maximumFractionDigits:2}).replace(/\u00a0/g,' ');
+const centsBRL=c=>BRL((Number(c)||0)/100);
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+function originColor(t){return ({Mesa:'#198754',Quarto:'#0d6efd',Retirada:'#6f42c1',Entrega:'#fd7e14'})[t]||'#6c757d'}
+function pad3(n){return String(Number(n)||0).padStart(3,'0')}
+function originCode(o){return `${o.origin_code||'P'}-${pad3(o.origin_number)}`}
+function generalCode(o){return `#${pad3(o.general_number)}`}
+function paymentLabel(v){return v==='pago'?'Pago':'Pendente'}
+function productionLabel(v){return ({aguardando:'Aguardando produção',em_preparo:'Em preparo',pronto:'Pronto'})[v]||v}
+function deliveryLabel(v,o){return v==='entregue'?(o.origin_type==='Retirada'?'Retirado':'Entregue'):(o.origin_type==='Retirada'?'Aguardando retirada':'Aguardando entrega')}
+function demoOrders(){
+  return [
+    {order_key:'demo#001',general_number:1,origin_number:1,origin_type:'Mesa',origin_code:'M',created_at_local:'19:05',customer_name:'Cliente demonstração',destination_details:'Mesa: 2',items:[{name:'Alcatra Acebolada',description:'Ponto: Ao ponto'}],total_cents:3299,payment_method:'Pagamento na entrega',production_status:'aguardando',payment_status:'pendente',delivery_status:'aguardando'},
+    {order_key:'demo#002',general_number:2,origin_number:1,origin_type:'Quarto',origin_code:'Q',created_at_local:'19:12',customer_name:'Hóspede demonstração',destination_details:'Quarto: 12',items:[{name:'Parmegiana',description:'Frango'}],total_cents:3999,payment_method:'Pix direto',production_status:'em_preparo',payment_status:'pago',delivery_status:'aguardando'},
+    {order_key:'demo#003',general_number:3,origin_number:1,origin_type:'Retirada',origin_code:'R',created_at_local:'19:18',customer_name:'Retirada demonstração',destination_details:'Retirada no restaurante',items:[{name:'X-Alcatra'}],total_cents:2800,payment_method:'Cartão PagBank',production_status:'pronto',payment_status:'pago',delivery_status:'aguardando'}
+  ];
+}
+function startAuto(){if(timer)clearInterval(timer);timer=setInterval(loadOrders,8000)}
+async function api(path,opts={}){
+  if(!PANEL_LIVE){
+    if(path==='/staff-orders') return {ok:true,orders:orders.length?orders:demoOrders()};
+    if(path.startsWith('/staff-orders/')&&String(opts.method||'').toUpperCase()==='PATCH'){
+      const key=decodeURIComponent(path.slice('/staff-orders/'.length));
+      const body=JSON.parse(opts.body||'{}');
+      const idx=orders.findIndex(o=>o.order_key===key);
+      if(idx>=0) orders[idx]={...orders[idx],...body};
+      return {ok:true,order:orders[idx]};
+    }
+  }
+  const r=await fetch(WORKER+path,{...opts,headers:{'Content-Type':'application/json',...(opts.headers||{})}});
+  const d=await r.json().catch(()=>({}));
+  if(!r.ok||!d.ok)throw new Error(d.erro||'Falha na operação.'); return d;
+}
+async function loadOrders(){
+  const info=document.getElementById('refreshInfo'); info.textContent='Atualizando…';
+  try{
+    const d=await api('/staff-orders');orders=d.orders||[];render();
+    info.textContent=(PANEL_LIVE?'Atualizado às ':'Modo de demonstração • ')+new Intl.DateTimeFormat('pt-BR',{hour:'2-digit',minute:'2-digit',second:'2-digit'}).format(new Date());
+  }catch(e){document.getElementById('globalMsg').innerHTML='<div class="error">'+esc(e.message)+'</div>';info.textContent='';}
+}
+function setFilter(v,btn){filter=v;document.querySelectorAll('[data-filter]').forEach(b=>b.classList.remove('active'));btn.classList.add('active');render()}
+function filtered(){
+  if(filter==='cozinha')return orders.filter(o=>o.production_status!=='pronto');
+  if(filter==='caixa')return orders.filter(o=>o.payment_status!=='pago');
+  if(filter==='entrega')return orders.filter(o=>o.delivery_status!=='entregue');
+  if(filter==='prontos')return orders.filter(o=>o.production_status==='pronto'&&o.delivery_status!=='entregue');
+  return orders;
+}
+function render(){
+  document.getElementById('mTotal').textContent=orders.length;
+  document.getElementById('mPrep').textContent=orders.filter(o=>o.production_status!=='pronto').length;
+  document.getElementById('mPay').textContent=orders.filter(o=>o.payment_status!=='pago').length;
+  document.getElementById('mDeliver').textContent=orders.filter(o=>o.delivery_status!=='entregue').length;
+  const list=filtered(); const box=document.getElementById('orders');
+  if(!list.length){box.innerHTML='<div class="card empty">Nenhum pedido neste filtro.</div>';return}
+  box.innerHTML=list.map(o=>{
+    const items=Array.isArray(o.items)?o.items:[];
+    const itemHtml=items.map(i=>`<li><b>${esc(i.name||'Item')}</b>${i.description?`<div class="muted">${esc(i.description)}</div>`:''}</li>`).join('');
+    return `<article class="order" id="order-${esc(o.order_key)}">
+      <div class="order-head">
+        <div>
+          <div class="order-title"><span class="badge" style="background:${originColor(o.origin_type)}">${esc(o.origin_type)}</span><strong style="font-size:20px">Pedido ${generalCode(o)}</strong><strong style="color:${originColor(o.origin_type)}">${originCode(o)}</strong></div>
+          <div class="muted" style="margin-top:5px">${esc(o.created_at_local)} • ${esc(o.customer_name)} • ${esc(o.destination_details)}</div>
+        </div>
+        <div class="total">${centsBRL(o.total_cents)}</div>
+      </div>
+      <div class="details">
+        <div class="items"><b>Itens</b><ul>${itemHtml||'<li>Sem itens detalhados</li>'}</ul><div class="muted" style="margin-top:8px">Pagamento escolhido: ${esc(o.payment_method||'Não informado')}</div></div>
+        <div class="status-grid">
+          <div class="status-box"><label>Produção</label><select onchange="changeStatus('${esc(o.order_key)}','production_status',this.value,this)">
+            <option value="aguardando" ${o.production_status==='aguardando'?'selected':''}>Aguardando produção</option>
+            <option value="em_preparo" ${o.production_status==='em_preparo'?'selected':''}>Em preparo</option>
+            <option value="pronto" ${o.production_status==='pronto'?'selected':''}>Pronto</option>
+          </select></div>
+          <div class="status-box"><label>Pagamento</label><select onchange="changeStatus('${esc(o.order_key)}','payment_status',this.value,this)">
+            <option value="pendente" ${o.payment_status==='pendente'?'selected':''}>Pendente</option>
+            <option value="pago" ${o.payment_status==='pago'?'selected':''}>Pago</option>
+          </select></div>
+          <div class="status-box"><label>${o.origin_type==='Retirada'?'Retirada':'Entrega'}</label><select onchange="changeStatus('${esc(o.order_key)}','delivery_status',this.value,this)">
+            <option value="aguardando" ${o.delivery_status==='aguardando'?'selected':''}>${o.origin_type==='Retirada'?'Aguardando retirada':'Aguardando entrega'}</option>
+            <option value="entregue" ${o.delivery_status==='entregue'?'selected':''}>${o.origin_type==='Retirada'?'Retirado':'Entregue'}</option>
+          </select></div>
+        </div>
+      </div>
+    </article>`
+  }).join('')
+}
+async function changeStatus(key,field,value,el){
+  el.disabled=true;const old=orders.find(o=>o.order_key===key)?.[field];
+  try{const d=await api('/staff-orders/'+encodeURIComponent(key),{method:'PATCH',body:JSON.stringify({[field]:value})});const idx=orders.findIndex(o=>o.order_key===key);if(idx>=0)orders[idx]=d.order;render()}
+  catch(e){alert(e.message||'Não foi possível atualizar.');if(old!==undefined)el.value=old}
+  finally{el.disabled=false}
+}
+loadOrders();startAuto();
+</script>
+</body>
+</html>
