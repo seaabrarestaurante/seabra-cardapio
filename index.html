@@ -1,0 +1,961 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><!-- GAMA B - 12/11/2026: Heineken lata e Sopa com fotos padronizadas -->
+<!-- GAMA B: Entrega externa e Cartão PagBank temporariamente inativos; estrutura preservada -->
+<title>Seabra Restaurante | Cardápio</title>
+<style>:root{--bg:#151311;--card:#211d1a;--gold:#d99a3c;--cream:#f5eee3;--muted:#bcb4aa;--brown:#4a1f0d;--green:#1f8b4c}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:#fff;padding-bottom:90px}.hero{height:clamp(200px,50vw,280px);background:#4a1f0d url('img_001_06725d8f776d3441.jpg') center/contain no-repeat;position:relative}.brand{position:absolute;left:18px;bottom:18px}.brand h1{font-size:34px;margin:0;font-weight:500}.brand p{margin:4px 0;color:var(--gold);letter-spacing:4px}.status{background:#1d1a18;padding:14px 18px}.open{color:#74d39a;font-weight:700}.welcome{margin:12px 16px;padding:18px;background:var(--brown);border-radius:14px}.search{margin:12px 16px}.search input{width:100%;padding:15px;border-radius:12px;border:1px solid #70552d;background:#25211f;color:#fff;font-size:16px}.cats{display:flex;gap:8px;overflow:auto;padding:0 16px 12px;position:sticky;top:0;background:#151311dd;backdrop-filter:blur(8px);z-index:5}.cats button{white-space:nowrap;border:0;border-radius:10px;padding:11px 14px;background:#174f53;color:#fff;font-weight:700}.section{padding:10px 16px}.section h2{background:#153f42;padding:12px;border-radius:10px;font-size:21px}.item{display:grid;grid-template-columns:132px 1fr;gap:14px;padding:12px 0;border-bottom:1px solid #332e2a;cursor:pointer}.item img{width:132px;height:118px;object-fit:cover;object-position:center;background:#fff;padding:0;border-radius:14px;display:block}.ph{width:132px;height:118px;border-radius:14px;background:#302922;display:flex;align-items:center;justify-content:center;color:var(--gold);text-align:center;font-size:13px}.item h3{margin:2px 0 6px;font-size:18px}.desc{color:var(--muted);font-size:14px;line-height:1.35}.price{margin-top:8px;font-weight:800;color:#fff}.bottom{position:fixed;left:0;right:0;bottom:0;padding:12px 16px;background:#201b17;border-top:1px solid #59432d;display:flex;justify-content:space-between;align-items:center;z-index:20}.bottom button,.modal button{border:0;border-radius:12px;background:var(--green);color:white;padding:14px 18px;font-weight:800}.badge{background:var(--gold);color:#24160b;border-radius:999px;padding:3px 8px;font-weight:800}.modal{display:none;position:fixed;inset:0;background:#000a;z-index:30;align-items:flex-end}.sheet{background:#211d1a;border-radius:20px 20px 0 0;padding:20px;width:100%;max-height:85vh;overflow:auto}.sheet img{width:100%;max-height:260px;object-fit:contain;background:#fff;padding:6px;border-radius:14px}.sheet label{display:block;margin:12px 0}.sheet textarea{width:100%;padding:12px;background:#302a26;color:#fff;border:1px solid #5b4a3a;border-radius:10px}.close{float:right;background:#3a3029!important}.cartline{display:flex;justify-content:space-between;gap:10px;margin:10px 0}.small{font-size:12px;color:var(--muted)}@media(min-width:700px){body{max-width:760px;margin:auto}.modal{justify-content:center;align-items:center}.sheet{max-width:620px;border-radius:20px}}.prodgallery{display:flex;gap:8px;overflow-x:auto;margin:8px 0 14px}.prodgallery img{width:100%;max-width:320px;aspect-ratio:1/1;object-fit:cover;object-position:center;background:#fff;border-radius:14px;flex:0 0 88%}
+.choice-title{display:block;margin:16px 0 8px;font-weight:700;color:#fff}
+.choice-grid{display:flex;flex-wrap:wrap;gap:9px;margin:8px 0 14px}
+.choice-chip{display:inline-block;cursor:pointer;margin:0!important}
+.choice-chip input{position:absolute;opacity:0;pointer-events:none}
+.choice-chip span{display:block;padding:10px 13px;border:1px solid #70584b;border-radius:999px;background:#2b211c;color:#f6eee4;font-weight:700;transition:.15s ease;user-select:none}
+.choice-chip input:checked+span{background:#d99a3c;color:#21140d;border-color:#f2bd65;box-shadow:0 0 0 2px #d99a3c33}
+.availability-note{margin:12px 0;padding:12px;border:1px solid #8a603c;border-radius:12px;background:#21160f;color:#f0dfcf}
+
+.special-banner{margin:14px 16px;padding:16px;border:1px solid #d99a3c;border-radius:16px;background:linear-gradient(135deg,#4a1f0d,#211d1a);display:none}.special-banner.show{display:grid;grid-template-columns:110px 1fr;gap:14px;align-items:center}.special-banner img{width:110px;height:100px;object-fit:cover;border-radius:12px;background:#fff}.special-kicker{color:#f2bd65;font-size:12px;font-weight:900;letter-spacing:1.5px}.special-title{font-size:22px;font-weight:900;margin:4px 0}.special-price{font-size:20px;color:#ffd36d;font-weight:900}.winner{display:inline-block;margin:5px 0;padding:5px 9px;border-radius:999px;background:#d99a3c;color:#24160b;font-size:11px;font-weight:900}.special-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}.special-card{display:grid;grid-template-columns:100px 1fr;gap:12px;align-items:center;padding:12px;border-radius:14px;background:#2a1b13;border:1px solid #835c2e}.special-card img{width:100px;height:90px;object-fit:contain;background:#fff;border-radius:10px}.special-card{cursor:pointer}.champions-box{margin:14px 16px;padding:14px;border:1px solid #6a5132;border-radius:16px;background:#211d1a;display:none}.champions-box.show{display:block}.champions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.champion-card{padding:12px;border-radius:12px;background:#2b241f;text-align:center}.champion-pos{font-size:24px;font-weight:1000;color:#ffd36d}.champion-name{font-weight:900;margin-top:4px}.mercearia-group{margin-top:16px}.mercearia-section-title{font-size:18px;font-weight:1000;color:#ffd36d;margin:10px 0}.mercearia-group h3{color:#ffd36d;margin:8px 0}.mercearia-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:9px}.mercearia-item{background:#2b241f;border:1px solid #4b4038;border-radius:12px;padding:10px;cursor:pointer}.mercearia-price{font-weight:1000;color:#ffd36d;margin-top:5px}@media(max-width:700px){.champions-grid{grid-template-columns:1fr}}.field-note{font-size:11px;color:#d8c7bb;margin-top:5px}
+
+.fiscal-box{margin:16px 0;padding:14px;border:1px solid #86623f;border-radius:14px;background:#211811}
+.fiscal-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.fiscal-fields label{display:block;font-size:12px;color:#d8c7bb}
+.fiscal-fields input,.fiscal-fields textarea{width:100%;margin-top:5px;padding:10px;border-radius:9px;border:1px solid #6d584b;background:#fff;color:#222}
+.fiscal-note{font-size:12px;color:#e8c79e;line-height:1.4;margin-top:8px}
+@media(max-width:700px){.fiscal-fields{grid-template-columns:1fr}}
+.champion-img{width:100%;height:150px;object-fit:cover;border-radius:12px;margin-bottom:8px;background:#fff}.champion-ph{height:150px;display:flex;align-items:center;justify-content:center;font-size:42px;background:#fff;border-radius:12px;margin-bottom:8px}.champion-medal{font-weight:1000;color:#ffd36d;margin-bottom:4px}</style><script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+</head><body>
+<div class="hero" aria-label="Seabra Restaurante"></div><div class="status"><span class="open">● Cardápio digital</span><br><span class="small">Almoço: seg–sex, 11h–14h • Jantar: seg–sáb, 17h–21h30 • Realizamos entrega</span></div><div class="welcome">Comida de verdade • Bem servida • Saborosa • Rápida</div><div id="dailySpecialBanner" class="special-banner"></div><div id="salesChampions" class="champions-box"></div><div class="search"><input id="q" placeholder="🔎 Digite para buscar um item"></div><div class="cats" id="cats"></div><main id="menu"></main><section id="merceariaSection" class="section" style="display:none"><h2>🛒 Mercearia</h2><p class="small" style="margin:0 0 10px">Itens de conveniência disponíveis para compra.</p><div id="merceariaBox"></div></section>
+<div class="bottom"><div><b>Seu pedido</b> <span class="badge" id="count">0</span><div class="small" id="total">R$ 0,00</div></div><button onclick="openCart()">Ver carrinho</button></div><div class="modal" id="modal"><div class="sheet" id="sheet"></div></div>
+<!-- Versão corrigida em 05/11/2026: fotos originais preservadas, salada atualizada, bacon removido, batata R$ 7,99 -->
+<script>
+const BRL=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});const data={
+'Prato do Dia e Sopas':[['Sopa de Carne',23,'Sopa de carne da casa.','img_036_sopa.png', ''],],
+'Pratos Executivos':[
+['Filezinhos de Frango',25.99,'Filezinhos de frango. Escolha 3 acompanhamentos.','img_002_f47e984ca15c19a0.png','exec'],['Alcatra Acebolada',32.99,'Alcatra acebolada. Escolha 3 acompanhamentos.',['img_003_468860526f7fe191.png','img_004_2ee830c3c0437ab7.png'],'exec'],['Frango ou Carne à Parmegiana',39.99,'Parmegiana. Escolha 3 acompanhamentos.','img_005_eb8016876c7a372b.jpg','exec'],['Carneiro',36.99,'Carneiro, arroz, pirão e salada.',['img_006_c2e5fe94ba78371a.png','img_007_f4098beb0ddaddfc.png'],'']],
+'Salada Tropical':[['Salada Tropical da Casa',29.99,'Mix de folhas, cenoura, brócolis, macarrão parafuso, manga, ricota, ovo de codorna, tomate e milho. Molho de mostarda.','img_008_f13e3bb17009473f.jpg','salada']],
+'Cuscuz':[['Chapada Diamantina',17.99,'Cuscuz recheado com carne ou frango desfiado e queijo muçarela.','img_010_97194ef9a62ac6e0.png','chapada'],['Completão',25.99,'Cuscuz com queijo, proteína e ovo.',['img_009_439dd6d421305c42.jpg','img_034_chapada_frango.jpg'],'completao'],['Cuscuz com Carneiro',28.99,'Cuscuz com carneiro cozido.','img_011_ba12fa61e3bb1a3a.jpg','']],
+'Omeletes':[['Omelete de Frango',17.99,'Frango desfiado, queijo, tomate e cebola.','img_012_ea306bac8db3b52b.png',''],['Omelete de Carne do Sol',19.99,'Carne do sol desfiada, queijo, tomate e cebola.','img_013_44b0f11db4e529ad.png','']],
+'Tapiocas':[['Tapioca de Frango',17.99,'Frango desfiado e queijo.','img_014_d79458570e6609d4.png',''],['Tapioca de Carne do Sol',19.99,'Carne do sol desfiada e queijo.','img_015_ed86faae49eef083.png','']],
+'Hambúrgueres':[['X-Salada',16.99,'Hambúrguer, queijo muçarela, alface e tomate.','img_016_e5577318454860a7.jpg','burger'],['X-Frango',20,'120 g de frango, queijo, alface e tomate.','img_017_c65dd6bcbfdb433a.jpg','burger'],['X-Alcatra',28,'120 g de alcatra, queijo, alface e tomate.','img_018_583457c772eb723a.jpg','burger'],['X-Tudo',24.99,'Hambúrguer, frango, ovo, queijo muçarela, tomate e alface.','img_019_363539e7a6852e53.jpg','burger']],
+'Bebidas':[['Heineken lata',13,'Heineken lata gelada.','img_035_heineken_lata.png', ''],['Água com gás 500 ml',5,'Garrafa 500 ml — com gás.','img_020_475368b15aeb3a4c.jpg',''],['Água sem gás 500 ml',4,'Garrafa 500 ml — sem gás.','img_021_52ac406cdf00dcca.jpg',''],['Água 1,5 L',8,'Garrafa 1,5 litro — sem gás.','img_022_838a0d7e09e8dd08.jpg',''],['Refrigerante 350 ml',6.99,'Escolha a marca e depois Normal ou Zero.','img_023_bd055632942ebb14.jpg','refri'],['Suco',0,'Escolha o sabor disponível.','img_033_1f42dde1d1a7235c.jpg','suco'],['Shake de banana proteico',0,'Consultar disponibilidade.','img_024_dc1ec2e12eacac49.jpg','shake']],
+'Cafés':[['Café 200 ml',4.99,'','img_025_0349abf2bfe33061.jpg',''],['Café com leite 200 ml',5.99,'','img_026_9c4ce0bb6e11411e.jpg',''],['Café descafeinado 200 ml',6.99,'','img_027_57047306cc5a2008.jpg','']],
+'Extras':[['Ovo',2.99,'','img_028_64e57b7f10cba185.jpg','ovo'],['Batata frita',7.99,'','img_029_838cd46b2672aef9.jpg',''],['Vinagrete',2.99,'','img_030_76b73cb1e9dfbb3e.jpg',''],['Arroz',4.99,'','img_031_0f8465a05342bef3.jpg',''],['Feijão',4.99,'','img_032_84351f3d6b12e886.jpg',''],['Sumo de limão',1.5,'','img_033_1f42dde1d1a7235c.jpg','']]};
+let cart=[];let deliveryQuote=null;let fiscalSettings={enabled:true,allow_at_order:true,allow_at_cash:true,portal_url:'',provider_mode:'portal',issuer:{},fields:[{key:'cpf_cnpj',label:'CPF ou CNPJ',enabled:true,required:false},{key:'nome_razao',label:'Nome / Razão social',enabled:true,required:false},{key:'email',label:'E-mail',enabled:true,required:false},{key:'telefone',label:'Telefone',enabled:true,required:false},{key:'cep',label:'CEP',enabled:true,required:false},{key:'endereco',label:'Endereço',enabled:true,required:false},{key:'numero',label:'Número',enabled:true,required:false},{key:'bairro',label:'Bairro',enabled:true,required:false},{key:'cidade',label:'Cidade',enabled:true,required:false},{key:'uf',label:'UF',enabled:true,required:false},{key:'observacoes',label:'Observações fiscais',enabled:true,required:false}]};let drinkSettings={refri_brands:['Coca-Cola'],juice_flavors:[]};const accomp=['Arroz','Salada de tomate','Feijão tropeiro','Feijão de caldo','Batata frita'];
+function firstImg(v){return Array.isArray(v)?v[0]:v}
+function ensureMerceariaTab(){
+  const sec=document.getElementById('merceariaSection');
+  if(!sec||sec.style.display==='none'||document.getElementById('catMercearia'))return;
+  let b=document.createElement('button');b.id='catMercearia';b.textContent='Mercearia';
+  b.onclick=()=>sec.scrollIntoView({behavior:'smooth'});cats.appendChild(b)
+}
+function render(filter=''){menu.innerHTML='';cats.innerHTML='';Object.entries(data).forEach(([cat,items])=>{let show=items.filter(x=>(x[0]+' '+x[2]).toLowerCase().includes(filter.toLowerCase()));if(!show.length)return;let b=document.createElement('button');b.textContent=cat;b.onclick=()=>document.getElementById('s-'+cat.replace(/\W/g,'')).scrollIntoView({behavior:'smooth'});cats.appendChild(b);let s=document.createElement('section');s.className='section';s.id='s-'+cat.replace(/\W/g,'');s.innerHTML='<h2>'+cat+'</h2>';show.forEach(x=>{let d=document.createElement('div');d.className='item';d.innerHTML=(x[3]?`<img src="${firstImg(x[3])}" alt="${x[0]}" referrerpolicy="no-referrer" onerror="this.style.display='none'">`:`<div class="ph">SEABRA<br>RESTAURANTE</div>`)+`<div><h3>${x[0]}</h3><div class="desc">${x[2]}</div><div class="price">${x[1]?BRL(x[1]):'Consultar'}</div></div>`;d.onclick=()=>openItem(x);s.appendChild(d)});menu.appendChild(s)});ensureMerceariaTab()}render();q.oninput=e=>render(e.target.value);
+function choiceButtons(name,values,onchange=''){
+  return '<div class="choice-grid">'+values.map(a=>`<label class="choice-chip"><input type="radio" name="${name}" value="${a}" ${onchange?`onchange="${onchange}"`:''}><span>${a}</span></label>`).join('')+'</div>';
+}
+function toggleCompletaoPonto(){
+  const prot=sheet.querySelector('input[name="prot"]:checked')?.value||'';
+  const box=document.getElementById('completaoPonto');
+  if(!box) return;
+  box.style.display=prot==='Carne'?'block':'none';
+  if(prot!=='Carne') box.querySelectorAll('input[name="ponto"]').forEach(i=>i.checked=false);
+}
+function openItem(x){
+  let opts='';
+  if(x[4]=='exec'){
+    opts='<b>Escolha exatamente 3 acompanhamentos:</b>'+accomp.map(a=>`<label><input type="checkbox" name="op" value="${a}"> ${a}</label>`).join('');
+    if(x[0]=='Alcatra Acebolada'){
+      opts+='<b class="choice-title">Como deseja a carne?</b>'+choiceButtons('ponto',['Bem passado','Ao ponto','Mal passado']);
+    }
+  }
+  if(x[4]=='salada') opts='<b>Escolha sua proteína:</b>'+['Frango','Carne','Peixe'].map(a=>`<label><input type="radio" name="prot" value="${a}"> ${a}</label>`).join('');
+  if(x[4]=='completao'){
+    opts='<b class="choice-title">Escolha a proteína:</b>'+choiceButtons('prot',['Carne','Frango'],'toggleCompletaoPonto()')+
+      '<div id="completaoPonto" style="display:none"><b class="choice-title">Como deseja a carne?</b>'+choiceButtons('ponto',['Bem passado','Ao ponto','Mal passado'])+'</div>';
+  }
+  if(x[4]=='chapada') opts='<b>Escolha o recheio:</b><label><input type="radio" name="prot" value="Carne desfiada"> Carne desfiada</label><label><input type="radio" name="prot" value="Frango desfiado"> Frango desfiado</label>';
+  if(x[4]=='burger') opts='<label><input type="checkbox" id="fries"> Adicionar batata frita + R$ 7,99</label>';
+  if(x[4]=='ovo') opts='<b class="choice-title">Como deseja o ovo?</b>'+choiceButtons('ponto',['Bem passado','Ao ponto','Mal passado']);
+  if(x[4]=='refri'){
+    const marcas=(drinkSettings.refri_brands&&drinkSettings.refri_brands.length)?drinkSettings.refri_brands:['Coca-Cola'];
+    opts='<b class="choice-title">Escolha o refrigerante:</b>'+choiceButtons('marca',marcas)+
+      '<b class="choice-title">Escolha o tipo:</b>'+choiceButtons('tipo',['Normal (com açúcar)','Zero (sem açúcar)']);
+  }
+  if(x[4]=='suco'){
+    const sabores=(drinkSettings.juice_flavors&&drinkSettings.juice_flavors.length)?drinkSettings.juice_flavors:[];
+    opts=sabores.length
+      ? '<b class="choice-title">Escolha o sabor:</b>'+choiceButtons('sabor',sabores)
+      : '<div class="availability-note"><b>Sabores em atualização.</b><br>Consulte o restaurante sobre os sabores disponíveis.</div>';
+  }
+  if(x[4]=='shake'){
+    opts='<div class="availability-note"><b>Consultar disponibilidade</b><br>Você pode acrescentar o shake ao carrinho. O restaurante confirmará a disponibilidade e o valor antes do pagamento.</div>';
+  }
+  const canAdd=!!x[1] || x[4]=='shake' || x[4]=='suco';
+  sheet.innerHTML=`<button class="close" onclick="closeM()">Fechar</button>${x[3]?`<div class="prodgallery">${(Array.isArray(x[3])?x[3]:[x[3]]).map(im=>`<img src="${im}" alt="${x[0]}">`).join('')}</div>`:''}<h2>${x[0]}</h2><p class="desc">${x[2]}</p><h3>${x[1]?BRL(x[1]):'Consultar disponibilidade'}</h3>${opts}<label>Observação<textarea id="obs" placeholder="Ex.: sem cebola"></textarea></label>${canAdd?'<button onclick="add()">Adicionar ao pedido</button>':''}`;
+  modal.style.display='flex';renderFiscalRequestArea();
+  window.current=x;
+}
+function add(){
+  let x=current;
+  const accompChoices=[...sheet.querySelectorAll('input[name="op"]:checked')].map(i=>i.value);
+  const point=sheet.querySelector('input[name="ponto"]:checked')?.value||'';
+  const prot=sheet.querySelector('input[name="prot"]:checked')?.value||'';
+  const marca=sheet.querySelector('input[name="marca"]:checked')?.value||'';
+  const tipo=sheet.querySelector('input[name="tipo"]:checked')?.value||'';
+  const sabor=sheet.querySelector('input[name="sabor"]:checked')?.value||'';
+
+  if(x[4]=='exec'&&accompChoices.length!=3){alert('Escolha exatamente 3 acompanhamentos.');return}
+  if(x[0]=='Alcatra Acebolada'&&!point){alert('Escolha o ponto da carne.');return}
+  if(['salada','chapada'].includes(x[4])&&!prot){alert('Escolha uma opção.');return}
+  if(x[4]=='completao'&&!prot){alert('Escolha a proteína.');return}
+  if(x[4]=='completao'&&prot==='Carne'&&!point){alert('Escolha o ponto da carne.');return}
+  if(x[4]=='ovo'&&!point){alert('Escolha como deseja o ovo.');return}
+  if(x[4]=='refri'&&!marca){alert('Escolha o refrigerante.');return}
+  if(x[4]=='refri'&&!tipo){alert('Escolha Normal ou Zero.');return}
+  if(x[4]=='suco'&&drinkSettings.juice_flavors.length&&!sabor){alert('Escolha o sabor do suco.');return}
+
+  let choices=[...sheet.querySelectorAll('input:checked')].map(i=>i.value||'Batata frita');
+  let extra=sheet.querySelector('#fries')?.checked?7.99:0;
+  const consult=x[4]=='shake'||x[4]=='suco'&&!x[1];
+  cart.push({name:x[0],price:x[1]+extra,choices,obs:sheet.querySelector('#obs').value,consult,img:firstImg(x[3])});
+  closeM();update();
+}
+function closeM(){modal.style.display='none'}function update(){count.textContent=cart.length;const sub=cart.reduce((s,x)=>s+x.price,0);const freight=deliveryQuote?.fee||0;total.textContent=BRL(sub+freight)}
+function openCart(){
+  let subtotal=cart.reduce((s,x)=>s+x.price,0);
+  sheet.innerHTML=`
+    <button class="close" onclick="closeM()">Fechar</button>
+    <h2>Seu pedido</h2>
+    ${cart.length?cart.map((x,i)=>`<div class="cartline"><div><b>${x.name}</b><div class="small">${x.choices.join(', ')} ${x.obs?'• '+x.obs:''}${x.consult?' • disponibilidade/valor a confirmar':''}</div></div><div>${x.consult?'Consultar':BRL(x.price)} <a href="#" onclick="cart.splice(${i},1);update();openCart();return false" style="color:#e77">remover</a></div></div>`).join(''):'<p>Seu carrinho está vazio.</p>'}
+    <hr>
+    <div class="cartline"><b>${cart.some(x=>x.consult)?'Subtotal dos itens com preço definido':'Subtotal'}</b><b>${BRL(subtotal)}</b></div>
+    ${cart.some(x=>x.consult)?'<p class="small" style="color:#f1b55b">Há item com disponibilidade e valor a confirmar. Ele não está incluído neste subtotal.</p>':''}
+    <p class="small">Taxa de embalagem: R$ 1,50. Serviço de quarto: R$ 3,00 quando aplicável.</p>
+    ${cart.length?`
+      <div style="margin:18px 0;padding:14px;border:1px solid #6f4a33;border-radius:14px;background:#1d1511">
+        <b>Identificação do pedido</b>
+        <label style="display:block;margin-top:12px">Nome (opcional)</label>
+        <input id="customerName" type="text" placeholder="Digite o nome, se quiser" style="width:100%;margin-top:6px;padding:12px;border-radius:10px;border:1px solid #6d584b;background:#fff;color:#222">
+
+        <label style="display:block;margin-top:14px">Onde você quer receber ou retirar?</label>
+        <select id="orderType" onchange="renderOrderFields()" style="width:100%;margin-top:6px;padding:12px;border-radius:10px;border:1px solid #6d584b;background:#fff;color:#222">
+          <option value="">Selecione uma opção</option>
+          <option value="Mesa">Para comer no restaurante</option>
+          <option value="Quarto">Quarto do hotel</option>
+          <option value="Retirada">Para levar</option>
+          <option value="Entrega" disabled>Entrega fora do hotel — temporariamente indisponível</option>
+        </select>
+        <div id="orderExtraFields"></div>
+      </div>
+
+      <div id="fiscalRequestArea"></div><div style="margin:16px 0"><b>Forma de pagamento</b>
+        <label style="display:block;margin-top:10px"><input type="radio" name="pay" value="Pix direto"> Pix direto (QR Code / Copia e Cola)</label>
+        <label style="display:block;margin-top:8px;opacity:.55"><input type="radio" name="pay" value="Cartão PagBank" disabled> Cartão pelo PagBank — temporariamente indisponível</label>
+        <div class="small" style="margin:5px 0 0 24px;color:#d8c7bb">Pagamento pelo PagBank está temporariamente indisponível. A estrutura permanece pronta para reativação.</div>
+        <label style="display:block;margin-top:8px"><input type="radio" name="pay" value="Pagamento na entrega" checked> Pagar na entrega/retirada</label>
+      </div>
+      <button onclick="checkout()">Continuar pedido</button>
+    `:''}`;
+  modal.style.display='flex';
+  renderFiscalRequestArea();
+}
+
+function renderOrderFields(){
+  deliveryQuote=null;update();
+  const type=document.getElementById('orderType')?.value||'';
+  const box=document.getElementById('orderExtraFields');
+  if(!box) return;
+  const inp=(id,label,ph,extra='')=>`<label style="display:block;margin-top:12px">${label}</label><input id="${id}" type="text" placeholder="${ph}" ${extra} style="width:100%;margin-top:6px;padding:12px;border-radius:10px;border:1px solid #6d584b;background:#fff;color:#222">`;
+  if(type==='Mesa') box.innerHTML=inp('tableNumber','Número da mesa','Ex.: Mesa 3');
+  else if(type==='Quarto') box.innerHTML=
+    inp('roomPhone','Telefone / WhatsApp *','Ex.: (75) 99999-9999','inputmode="tel"')+
+    inp('roomApartment','Apartamento / quarto *','Ex.: 204')+
+    `<label style="display:block;margin-top:12px">Bloco *</label><select id="roomBlock" style="width:100%;margin-top:6px;padding:12px;border-radius:10px;border:1px solid #6d584b;background:#fff;color:#222"><option value="">Selecione</option><option value="Bloco A — chaveiro preto">Bloco A — chaveiro preto</option><option value="Bloco B — chaveiro cinza">Bloco B — chaveiro cinza</option></select><div class="field-note">O telefone é obrigatório para contato sobre o pedido.</div>`;
+  else if(type==='Retirada') box.innerHTML=
+    inp('takePhone','Telefone / WhatsApp *','Ex.: (75) 99999-9999','inputmode="tel"')+
+    inp('takeApartment','Apartamento *','Ex.: 204')+
+    `<label style="display:block;margin-top:12px">Bloco *</label><select id="takeBlock" style="width:100%;margin-top:6px;padding:12px;border-radius:10px;border:1px solid #6d584b;background:#fff;color:#222"><option value="">Selecione</option><option value="Bloco A — chaveiro preto">Bloco A — chaveiro preto</option><option value="Bloco B — chaveiro cinza">Bloco B — chaveiro cinza</option></select><div class="field-note">O telefone é obrigatório para contato sobre o pedido.</div>`;
+  else if(type==='Entrega') box.innerHTML=
+    `<div style="margin-top:12px;padding:12px;border:1px solid #6f4a33;border-radius:12px;background:#17110e">
+      <label style="display:block;font-weight:bold">CEP</label>
+      <div style="display:flex;gap:8px;align-items:center;margin-top:6px;flex-wrap:wrap">
+        <input id="zipCode" type="text" inputmode="numeric" maxlength="9" placeholder="Ex.: 44000-000" oninput="formatCEPInput(this)" onblur="lookupCEP()" style="flex:1;min-width:170px;padding:12px;border-radius:10px;border:1px solid #6d584b;background:#fff;color:#222">
+        <button type="button" onclick="lookupCEP()" style="width:auto;padding:12px 14px">Buscar CEP</button>
+      </div>
+      <div id="cepStatus" class="small" style="margin-top:8px;color:#d8c7bb">Digite 8 números. O endereço será preenchido automaticamente, mas você poderá editar tudo manualmente.</div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
+        <a href="https://buscacepinter.correios.com.br/app/endereco/index.php?t=" target="_blank" rel="noopener" style="color:#f1b55b;font-size:13px">Consultar CEP no site dos Correios</a>
+        <button type="button" onclick="manualAddressMode()" style="width:auto;background:#3a2a22;color:#fff;border:1px solid #6d584b;padding:7px 10px;border-radius:8px">Preencher manualmente</button>
+      </div>
+    </div>`+
+    inp('street','Rua / Avenida','Digite o nome da rua','oninput="invalidateFreight()"')+
+    inp('addressNumber','Número','Ex.: 120','oninput="invalidateFreight()"')+
+    inp('neighborhood','Bairro','Digite o bairro','oninput="invalidateFreight()"')+
+    inp('city','Cidade','Digite a cidade','oninput="invalidateFreight()"')+
+    inp('state','UF','Ex.: BA','maxlength="2" oninput="invalidateFreight()"')+
+    inp('complement','Complemento / referência','Apto., bloco, ponto de referência...','oninput="invalidateFreight()"')+
+    `<div id="freightBox" style="margin-top:16px;padding:14px;border:1px solid #8a603c;border-radius:12px;background:#21160f">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+        <div><b>Frete da entrega</b><div class="small" style="margin-top:4px">Cotação automática pela Uber Direct.</div></div>
+        <button id="freightButton" type="button" onclick="calculateFreight()" style="width:auto;padding:11px 14px">Calcular frete</button>
+      </div>
+      <div id="freightStatus" class="small" style="margin-top:10px;color:#d8c7bb">Preencha o endereço completo e toque em “Calcular frete”.</div>
+    </div>`;
+  else box.innerHTML='';
+}
+
+function formatCEPInput(el){
+  invalidateFreight();
+  const digits=(el.value||'').replace(/\D/g,'').slice(0,8);
+  el.value=digits.length>5?digits.slice(0,5)+'-'+digits.slice(5):digits;
+  if(digits.length===8) lookupCEP();
+}
+
+function setCEPStatus(msg,color='#d8c7bb'){
+  const el=document.getElementById('cepStatus');
+  if(el){el.textContent=msg;el.style.color=color;}
+}
+
+function manualAddressMode(){
+  setCEPStatus('Preenchimento manual ativado. Digite ou corrija os campos abaixo.','#f1b55b');
+  setTimeout(()=>document.getElementById('street')?.focus(),50);
+}
+
+async function lookupCEP(){
+  const cepEl=document.getElementById('zipCode');
+  if(!cepEl) return;
+  const cep=(cepEl.value||'').replace(/\D/g,'');
+  if(cep.length!==8){
+    if(cep.length) setCEPStatus('CEP incompleto. Digite os 8 números ou preencha o endereço manualmente.','#f1b55b');
+    return;
+  }
+  setCEPStatus('Buscando endereço...');
+  try{
+    const r=await fetch(`https://viacep.com.br/ws/${cep}/json/`,{cache:'no-store'});
+    if(!r.ok) throw new Error('Falha na consulta');
+    const d=await r.json();
+    if(d.erro){
+      setCEPStatus('CEP não encontrado. Confira no site dos Correios ou preencha manualmente.','#ff9d8f');
+      return;
+    }
+    const fill=(id,val)=>{const el=document.getElementById(id); if(el && val) el.value=val;};
+    fill('street',d.logradouro||'');
+    fill('neighborhood',d.bairro||'');
+    fill('city',d.localidade||'');
+    fill('state',d.uf||'');
+    setCEPStatus('Endereço localizado. Confira os dados e informe o número e o complemento, se houver.','#8fd19e');
+    setTimeout(()=>document.getElementById('addressNumber')?.focus(),50);
+  }catch(e){
+    setCEPStatus('Não foi possível consultar agora. Você pode preencher o endereço manualmente ou conferir no site dos Correios.','#ff9d8f');
+  }
+}
+
+
+function setFreightStatus(msg,color='#d8c7bb'){
+  const el=document.getElementById('freightStatus');
+  if(el){el.textContent=msg;el.style.color=color;}
+}
+function invalidateFreight(){
+  if(deliveryQuote){deliveryQuote=null;update();}
+  const el=document.getElementById('freightStatus');
+  if(el){el.textContent='Endereço alterado. Calcule o frete novamente.';el.style.color='#f1b55b';}
+}
+function deliveryAddressData(){
+  return {
+    zip_code:(document.getElementById('zipCode')?.value||'').replace(/\D/g,''),
+    street:(document.getElementById('street')?.value||'').trim(),
+    number:(document.getElementById('addressNumber')?.value||'').trim(),
+    neighborhood:(document.getElementById('neighborhood')?.value||'').trim(),
+    city:(document.getElementById('city')?.value||'').trim(),
+    state:(document.getElementById('state')?.value||'').trim().toUpperCase(),
+    complement:(document.getElementById('complement')?.value||'').trim(),
+    country:'BR'
+  };
+}
+function deliveryAddressKey(a){
+  return [a.zip_code,a.street,a.number,a.neighborhood,a.city,a.state,a.complement].map(v=>(v||'').toLowerCase().trim()).join('|');
+}
+async function calculateFreight(){
+  const a=deliveryAddressData();
+  if(a.zip_code.length!==8||!a.street||!a.number||!a.city||!a.state){
+    const faltando=[];
+    if(a.zip_code.length!==8) faltando.push('CEP');
+    if(!a.street) faltando.push('rua');
+    if(!a.number) faltando.push('número');
+    if(!a.city) faltando.push('cidade');
+    if(!a.state) faltando.push('UF');
+    setFreightStatus('Falta preencher: '+faltando.join(', ')+'.','#ff9d8f');
+    return;
+  }
+  const btn=document.getElementById('freightButton');
+  if(btn){btn.disabled=true;btn.textContent='Calculando...';}
+  setFreightStatus('Consultando a entrega...');
+  deliveryQuote=null;update();
+  try{
+    const dropoffAddress=[a.street+', '+a.number,a.neighborhood,a.city+' - '+a.state,a.zip_code].filter(Boolean).join(', ');
+    const r=await fetch('https://seabra-uber-direct.seabrarestauranteba-27c.workers.dev/quote',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        dropoff:a,
+        dropoff_address:dropoffAddress,
+        dropoff_structured:{
+          street_address:[a.street+', '+a.number,[a.neighborhood,a.complement].filter(Boolean).join(' - ')],
+          city:a.city,
+          state:a.state,
+          zip_code:a.zip_code,
+          country:'BR'
+        }
+      })
+    });
+    const d=await r.json().catch(()=>({}));
+    if(!r.ok){
+      let msg=d.message||d.erro||d.error||'Não foi possível obter a cotação agora.';
+      if(d.status_uber) msg+=` (Uber ${d.status_uber})`;
+      if(d.detalhe){
+        const det=typeof d.detalhe==='string'?d.detalhe:JSON.stringify(d.detalhe);
+        if(det&&det!=='{}') msg+=` — ${det.slice(0,220)}`;
+      }
+      setFreightStatus(msg,'#ffb38f');
+      return;
+    }
+    const rawFee=d.fee_cents??d.fee??d.amount??d.price;
+    const feeNumber=Number(rawFee);
+    if(!Number.isFinite(feeNumber)||feeNumber<=0){
+      setFreightStatus('A Uber respondeu, mas não retornou um valor de frete válido. Tente novamente.','#ffb38f');
+      return;
+    }
+    const feeBRL=(d.fee_cents!=null || (Number.isInteger(feeNumber)&&feeNumber>=100)) ? feeNumber/100 : feeNumber;
+    deliveryQuote={
+      fee:feeBRL,
+      currency:d.currency||'BRL',
+      quote_id:d.quote_id||d.id||'',
+      expires:d.expires||d.expires_at||'',
+      duration:d.duration||d.duration_minutes||null,
+      addressKey:deliveryAddressKey(a),
+      source:d.source||'uber_direct'
+    };
+    let extra=deliveryQuote.duration?` • previsão aproximada: ${deliveryQuote.duration} min`:'';
+    if(d.source==='fallback') extra+=' • valor de contingência';
+    setFreightStatus(`Frete: ${BRL(deliveryQuote.fee)}${extra}.`, '#8fd19e');
+    update();
+  }catch(e){
+    setFreightStatus('A cotação automática não respondeu. O pedido poderá seguir com o frete a confirmar pelo restaurante.','#ffb38f');
+  }finally{
+    if(btn){btn.disabled=false;btn.textContent='Calcular frete';}
+  }
+}
+function deliveryFreightFor(a){
+  if(!deliveryQuote) return null;
+  if(deliveryQuote.addressKey!==deliveryAddressKey(a)) return null;
+  return deliveryQuote;
+}
+
+function getOrderDestination(){
+  const rawName=(document.getElementById('customerName')?.value||'').trim();
+  const name=rawName||'Cliente';
+  const type=document.getElementById('orderType')?.value||'';
+  if(!type){alert('Escolha o tipo do pedido.');return null;}
+  if(type==='Mesa'){
+    const n=(document.getElementById('tableNumber')?.value||'').trim();
+    if(!n){alert('Informe o número da mesa.');return null;}
+    return {name,type,details:`Mesa: ${n}`,meta:{table:n}};
+  }
+  if(type==='Quarto'){
+    const phone=(document.getElementById('roomPhone')?.value||'').trim();
+    const apartment=(document.getElementById('roomApartment')?.value||'').trim();
+    const block=(document.getElementById('roomBlock')?.value||'').trim();
+    if(!phone){alert('Informe o telefone / WhatsApp.');return null;}
+    if(!apartment){alert('Informe o apartamento / quarto.');return null;}
+    if(!block){alert('Selecione o bloco.');return null;}
+    return {name,type,phone,details:`Quarto do hotel • Apto. ${apartment} • ${block} • WhatsApp: ${phone}`,meta:{phone,apartment,block,room:apartment}};
+  }
+  if(type==='Retirada'){
+    const phone=(document.getElementById('takePhone')?.value||'').trim();
+    const apartment=(document.getElementById('takeApartment')?.value||'').trim();
+    const block=(document.getElementById('takeBlock')?.value||'').trim();
+    if(!phone){alert('Informe o telefone / WhatsApp.');return null;}
+    if(!apartment){alert('Informe o apartamento.');return null;}
+    if(!block){alert('Selecione o bloco.');return null;}
+    return {name,type,phone,details:`Para levar • Apto. ${apartment} • ${block} • WhatsApp: ${phone}`,meta:{phone,apartment,block}};
+  }
+  const cep=(document.getElementById('zipCode')?.value||'').trim();
+  const rua=(document.getElementById('street')?.value||'').trim();
+  const numero=(document.getElementById('addressNumber')?.value||'').trim();
+  const bairro=(document.getElementById('neighborhood')?.value||'').trim();
+  const cidade=(document.getElementById('city')?.value||'').trim();
+  const uf=(document.getElementById('state')?.value||'').trim().toUpperCase();
+  const comp=(document.getElementById('complement')?.value||'').trim();
+  if(!cep||!rua||!numero||!bairro||!cidade||!uf){alert('Para entrega, preencha CEP, rua, número, bairro, cidade e UF.');return null;}
+  const address={zip_code:cep.replace(/\D/g,''),street:rua,number:numero,neighborhood:bairro,city:cidade,state:uf,complement:comp,country:'BR'};
+  const freight=deliveryFreightFor(address);
+  return {name,type,address,freight,details:`Entrega: ${rua}, nº ${numero} - ${bairro} - ${cidade}/${uf} - CEP ${cep}${comp?` - ${comp}`:''}`,meta:{phone:''}};
+}
+
+const PIX_KEY='06811322560';
+const PIX_MERCHANT_NAME='SEABRA RESTAURANTE';
+const PIX_MERCHANT_CITY='FEIRA SANTANA';
+
+// Worker separado do PagBank. O token permanece apenas no Cloudflare.
+const PAGBANK_WORKER_URL='https://pagbanktoken.seabrarestauranteba-27c.workers.dev';
+
+let pixCurrentPayload='';
+let pixCurrentDest=null;
+
+function pixTLV(id,value){
+  value=String(value);
+  return id+String(value.length).padStart(2,'0')+value;
+}
+function pixNormalize(value,max){
+  return String(value||'')
+    .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .replace(/[^A-Za-z0-9 .-]/g,'')
+    .toUpperCase().trim().slice(0,max);
+}
+function pixCRC16(payload){
+  let crc=0xFFFF;
+  for(let i=0;i<payload.length;i++){
+    crc^=payload.charCodeAt(i)<<8;
+    for(let j=0;j<8;j++) crc=(crc&0x8000)?((crc<<1)^0x1021):(crc<<1);
+    crc&=0xFFFF;
+  }
+  return crc.toString(16).toUpperCase().padStart(4,'0');
+}
+function generatePixPayload(amount){
+  const merchantAccount=pixTLV('00','BR.GOV.BCB.PIX')+pixTLV('01',PIX_KEY);
+  const additional=pixTLV('05','***');
+  let payload='';
+  payload+=pixTLV('00','01');
+  payload+=pixTLV('26',merchantAccount);
+  payload+=pixTLV('52','0000');
+  payload+=pixTLV('53','986');
+  payload+=pixTLV('54',Number(amount).toFixed(2));
+  payload+=pixTLV('58','BR');
+  payload+=pixTLV('59',pixNormalize(PIX_MERCHANT_NAME,25));
+  payload+=pixTLV('60',pixNormalize(PIX_MERCHANT_CITY,15));
+  payload+=pixTLV('62',additional);
+  payload+='6304';
+  return payload+pixCRC16(payload);
+}
+function fallbackPixQR(payload){
+  const box=document.getElementById('pixQrCode');
+  if(!box) return;
+  box.innerHTML='<div style="padding:18px;border:1px dashed #8c715f;border-radius:12px;color:#d8c7bb">QR Code indisponível neste navegador. Use o botão <b>Copiar código Pix</b> abaixo.</div>';
+}
+function showPixPayment(dest){
+  const subtotal=cart.reduce((s,x)=>s+x.price,0);
+  const freight=(dest.type==='Entrega'&&dest.freight)?dest.freight.fee:0;
+  const totalFinal=subtotal+freight;
+  pixCurrentPayload=generatePixPayload(totalFinal);
+  pixCurrentDest=dest;
+  sheet.innerHTML=`
+    <button class="close" onclick="openCart()">Voltar</button>
+    <h2>Pagamento via Pix</h2>
+    <div style="margin:12px 0;padding:14px;border:1px solid #6f4a33;border-radius:14px;background:#1d1511">
+      <div class="cartline"><span>Subtotal</span><b>${BRL(subtotal)}</b></div>
+      ${dest.type==='Entrega'?`<div class="cartline"><span>Frete</span><b>${BRL(freight)}</b></div>`:''}
+      <div class="cartline" style="font-size:18px;margin-top:8px"><b>Total do Pix</b><b>${BRL(totalFinal)}</b></div>
+    </div>
+    <p class="small">Escaneie o QR Code no aplicativo do seu banco ou use o Pix Copia e Cola. Antes de confirmar, confira no seu banco o favorecido exibido.</p>
+    <div id="pixQrCode" style="background:#fff;width:280px;max-width:100%;min-height:280px;margin:16px auto;padding:10px;border-radius:14px;display:flex;align-items:center;justify-content:center"></div>
+    <label style="display:block;margin-top:10px">Pix Copia e Cola</label>
+    <textarea id="pixPayloadText" readonly style="width:100%;min-height:105px;margin-top:6px;padding:10px;border-radius:10px;border:1px solid #6d584b;background:#fff;color:#222;font-size:12px">${pixCurrentPayload}</textarea>
+    <button type="button" onclick="copyPixCode()" style="margin-top:10px">Copiar código Pix</button>
+    <button type="button" onclick="pixPaidAndSend()" style="margin-top:10px;background:#198754">Já fiz o Pix — enviar pedido</button>
+    <p class="small" style="margin-top:10px">A confirmação do recebimento do Pix é feita pelo restaurante. Este botão informa que o cliente declarou ter realizado o pagamento.</p>
+  `;
+  modal.style.display='flex';
+  setTimeout(()=>{
+    const box=document.getElementById('pixQrCode');
+    if(!box) return;
+    if(typeof QRCode==='function'){
+      box.innerHTML='';
+      new QRCode(box,{text:pixCurrentPayload,width:260,height:260,correctLevel:QRCode.CorrectLevel.M});
+    } else fallbackPixQR(pixCurrentPayload);
+  },150);
+}
+async function copyPixCode(){
+  try{
+    await navigator.clipboard.writeText(pixCurrentPayload);
+    alert('Código Pix copiado.');
+  }catch(e){
+    const el=document.getElementById('pixPayloadText');
+    if(el){el.focus();el.select();document.execCommand('copy');alert('Código Pix copiado.');}
+  }
+}
+async function pixPaidAndSend(){
+  if(!pixCurrentDest){alert('Não foi possível recuperar os dados do pedido. Volte ao carrinho e tente novamente.');return;}
+  await sendWhats('Pix direto — cliente informou pagamento realizado',pixCurrentDest);
+}
+
+
+
+// Fila de pedidos — atualização 10/11/2026.
+// Em produção, a numeração vem do Worker/D1 para não repetir entre celulares.
+const ORDER_SEQUENCE_DEMO = !['seabrarestaurante.net','www.seabrarestaurante.net'].includes(location.hostname);
+const ORDER_ORIGIN_META = {
+  'Mesa':    {code:'M', label:'MESA', emoji:'🟢', color:'#198754'},
+  'Quarto':  {code:'Q', label:'QUARTO', emoji:'🔵', color:'#0d6efd'},
+  'Retirada':{code:'R', label:'RETIRADA', emoji:'🟣', color:'#6f42c1'},
+  'Entrega': {code:'E', label:'ENTREGA', emoji:'🟠', color:'#fd7e14'}
+};
+let demoSequenceState={day:'',global:0,Mesa:0,Quarto:0,Retirada:0,Entrega:0};
+let currentOrderIdentity=null;
+let pendingWhatsText='';
+
+function orderPad(n){return String(Number(n)||0).padStart(3,'0');}
+function orderMeta(type){return ORDER_ORIGIN_META[type]||{code:'P',label:String(type||'PEDIDO').toUpperCase(),emoji:'⚪',color:'#6c757d'};}
+function orderOriginCode(order){return `${order.origin_code||orderMeta(order.origin_type).code}-${orderPad(order.origin_number)}`;}
+function orderGeneralCode(order){return `#${orderPad(order.general_number)}`;}
+function todayBahiaKey(){
+  const parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Bahia',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+  const get=t=>parts.find(p=>p.type===t)?.value||'';
+  return `${get('year')}-${get('month')}-${get('day')}`;
+}
+function demoOrderIdentity(dest){
+  const day=todayBahiaKey();
+  if(demoSequenceState.day!==day) demoSequenceState={day,global:0,Mesa:0,Quarto:0,Retirada:0,Entrega:0};
+  demoSequenceState.global+=1;
+  demoSequenceState[dest.type]=(demoSequenceState[dest.type]||0)+1;
+  const meta=orderMeta(dest.type);
+  return {
+    ok:true, demo:true, day,
+    general_number:demoSequenceState.global,
+    origin_number:demoSequenceState[dest.type],
+    origin_type:dest.type,
+    origin_code:meta.code,
+    origin_label:meta.label,
+    origin_emoji:meta.emoji,
+    origin_color:meta.color,
+    created_at_local:new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Bahia',hour:'2-digit',minute:'2-digit',hour12:false}).format(new Date()),
+    estimate_min:25,
+    estimate_max:35,
+    estimate_text:'25–35 min'
+  };
+}
+
+async function reserveOrderIdentity(dest){
+  if(ORDER_SEQUENCE_DEMO) return demoOrderIdentity(dest);
+  const response=await fetch(PAGBANK_WORKER_URL+'/order-sequence',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({type:dest.type,customer:dest.name,destination:dest.details})
+  });
+  const data=await response.json().catch(()=>({}));
+  if(!response.ok || !data.ok){
+    throw new Error(data.erro||data.message||'Não foi possível gerar o número do pedido.');
+  }
+  return data;
+}
+
+function buildWhatsText(pay,dest,order){
+  const subtotal=cart.reduce((sum,x)=>sum+x.price,0);
+  const freight=(dest.type==='Entrega'&&dest.freight)?dest.freight.fee:0;
+  const totalFinal=subtotal+freight;
+  const freightLine=dest.type==='Entrega'?(dest.freight?`\n*Frete: ${BRL(freight)}*`:`\n*Frete: a confirmar pelo restaurante*`):'';
+  const meta=orderMeta(dest.type);
+  const orderHeader=`${meta.emoji} *${meta.label} — PEDIDO ${orderGeneralCode(order)} — ${orderOriginCode(order)}*`;
+  return orderHeader+'\n'+
+    `*Ordem de chegada hoje:* ${orderGeneralCode(order)}\n*Ordem da origem:* ${orderOriginCode(order)}\n*Horário:* ${order.created_at_local||'--:--'}\n*Previsão inicial de preparo:* ${order.estimate_text||'25–35 min'}\n\n`+
+    `*Cliente:* ${dest.name}\n*Tipo do pedido:* ${dest.type}\n*Destino:* ${dest.details}\n\n`+
+    cart.map((x,i)=>`${i+1}. *${x.name}* - ${x.consult?'Consultar disponibilidade/valor':BRL(x.price)}${x.choices.length?'\n   Opções: '+x.choices.join(', '):''}${x.obs?'\n   Obs.: '+x.obs:''}`).join('\n\n')+
+    `\n\n*${cart.some(x=>x.consult)?'Subtotal dos itens com preço definido':'Subtotal'}: ${BRL(subtotal)}*${freightLine}\n*${cart.some(x=>x.consult)?'Total parcial':'Total do pedido'}: ${BRL(totalFinal)}*${cart.some(x=>x.consult)?'\n*Há item com disponibilidade e valor a confirmar.*':''}\n*Forma de pagamento escolhida: ${pay}*\n\nPor favor, confirme o recebimento e o atendimento do pedido.`;
+}
+
+function openCurrentWhatsApp(){
+  if(!pendingWhatsText){alert('Não foi possível recuperar o texto do pedido.');return;}
+  location.href='https://wa.me/5575999812491?text='+encodeURIComponent(pendingWhatsText);
+}
+
+function showOrderConfirmation(order,dest,pay,whatsText,extraMessage=''){
+  currentOrderIdentity=order;
+  pendingWhatsText=whatsText||'';
+  const meta=orderMeta(dest.type);
+  sheet.innerHTML=`
+    <button class="close" onclick="modal.style.display='none'">Fechar</button>
+    <div style="text-align:center;padding:8px 0 4px">
+      <div style="display:inline-block;padding:7px 12px;border-radius:999px;background:${meta.color};color:white;font-weight:800;letter-spacing:.4px">${meta.label}</div>
+      <h2 style="margin:14px 0 6px">Pedido ${orderGeneralCode(order)}</h2>
+      <div style="font-size:21px;font-weight:800;color:${meta.color}">${orderOriginCode(order)}</div>
+      ${order.demo?'<div class="small" style="margin-top:6px;color:#f1b55b">Modo de demonstração da fila</div>':''}
+    </div>
+    <div style="margin:16px 0;padding:14px;border:1px solid #6f4a33;border-radius:14px;background:#1d1511">
+      <div class="cartline"><span>Ordem de chegada hoje</span><b>${orderGeneralCode(order)}</b></div>
+      <div class="cartline"><span>Ordem entre pedidos de ${meta.label.toLowerCase()}</span><b>${orderOriginCode(order)}</b></div>
+      <div class="cartline"><span>Horário</span><b>${order.created_at_local||'--:--'}</b></div>
+      <div class="cartline"><span>Previsão inicial de preparo</span><b>${order.estimate_text||'25–35 min'}</b></div>
+    </div>
+    <p style="font-weight:700">Seu pedido foi identificado. Guarde o número <span style="color:${meta.color}">${orderGeneralCode(order)}</span>.</p>
+    ${extraMessage?`<p class="small">${extraMessage}</p>`:''}
+    ${whatsText?`<button type="button" onclick="openCurrentWhatsApp()" style="margin-top:10px;background:#198754">Enviar pedido ao restaurante no WhatsApp</button>`:''}
+    <button type="button" onclick="openCart()" style="margin-top:10px">Voltar ao carrinho</button>
+  `;
+  modal.style.display='flex';
+}
+
+function savePendingPagBankOrder(order,dest){
+  try{localStorage.setItem('seabraPendingPagBankOrder',JSON.stringify({order,dest,createdAt:Date.now()}));}catch(e){}
+}
+function readPendingPagBankOrder(){
+  try{
+    const raw=localStorage.getItem('seabraPendingPagBankOrder');
+    if(!raw) return null;
+    const data=JSON.parse(raw);
+    if(!data?.order||!data?.dest) return null;
+    return data;
+  }catch(e){return null;}
+}
+function clearPendingPagBankOrder(){try{localStorage.removeItem('seabraPendingPagBankOrder');}catch(e){}}
+function maybeShowPagBankReturn(){
+  const params=new URLSearchParams(location.search);
+  if(params.get('pagamento')!=='retorno') return;
+  const pending=readPendingPagBankOrder();
+  if(!pending) return;
+  setTimeout(()=>{
+    const text=buildWhatsText('Cartão PagBank — confirmar status do pagamento',pending.dest,pending.order);
+    showOrderConfirmation(pending.order,pending.dest,'Cartão PagBank',text,'Você retornou do PagBank. O restaurante deve confirmar o status do pagamento.');
+    clearPendingPagBankOrder();
+  },250);
+}
+
+const WEATHER_LAT=-12.2664, WEATHER_LON=-38.9663;
+function weatherLabel(code){const m={0:'Céu limpo',1:'Predominantemente limpo',2:'Parcialmente nublado',3:'Nublado',45:'Neblina',48:'Neblina',51:'Garoa leve',53:'Garoa',55:'Garoa forte',61:'Chuva leve',63:'Chuva',65:'Chuva forte',80:'Pancadas leves',81:'Pancadas',82:'Pancadas fortes',95:'Trovoada'};return m[Number(code)]||'Condição não classificada'}
+async function captureWeather(){try{const u=`https://api.open-meteo.com/v1/forecast?latitude=${WEATHER_LAT}&longitude=${WEATHER_LON}&current=temperature_2m,weather_code&timezone=America%2FBahia`;const r=await fetch(u);const d=await r.json();if(!r.ok||!d.current)return null;return {temperature:Number(d.current.temperature_2m),code:Number(d.current.weather_code),condition:weatherLabel(d.current.weather_code),captured_at:d.current.time||''}}catch(e){return null}}
+let lastCapturedWeather=null;
+async function ensureWeather(){
+  if(lastCapturedWeather)return lastCapturedWeather;
+  try{lastCapturedWeather=await Promise.race([captureWeather(),new Promise(r=>setTimeout(()=>r(null),900))])}catch(e){lastCapturedWeather=null}
+  return lastCapturedWeather;
+}
+function prefetchWeather(){if(!lastCapturedWeather)captureWeather().then(x=>{if(x)lastCapturedWeather=x}).catch(()=>{})}
+
+async function loadFiscalSettings(){try{const r=await fetch(PAGBANK_WORKER_URL+'/fiscal-settings'),d=await r.json();if(r.ok&&d.ok&&d.settings)fiscalSettings=d.settings}catch(e){}}
+function renderFiscalRequestArea(){
+ const box=document.getElementById('fiscalRequestArea');if(!box)return;
+ if(!fiscalSettings.enabled||!fiscalSettings.allow_at_order){box.innerHTML='';return}
+ box.innerHTML=`<div class="fiscal-box"><label style="font-weight:800"><input id="wantFiscal" type="checkbox" onchange="toggleFiscalFields()"> Solicitar nota fiscal</label><div class="fiscal-note">Você pode adiantar os dados agora ou informar no Caixa na hora do pagamento.</div><div id="fiscalFieldsBox" style="display:none"></div></div>`;
+}
+function toggleFiscalFields(){let a=document.getElementById('fiscalFieldsBox'),on=document.getElementById('wantFiscal')?.checked;if(!a)return;a.style.display=on?'block':'none';if(!on){a.innerHTML='';return}let fs=(fiscalSettings.fields||[]).filter(x=>x.enabled);a.innerHTML='<div class="fiscal-fields">'+fs.map(f=>`<div><label>${f.label}${f.required?' *':''}</label>${f.key==='observacoes'?`<textarea id="fiscal_${f.key}" rows="2"></textarea>`:`<input id="fiscal_${f.key}" type="text">`}</div>`).join('')+'</div>'}
+function getFiscalRequest(){let requested=!!document.getElementById('wantFiscal')?.checked;if(!requested)return{requested:false,data:{}};let data={};for(const f of(fiscalSettings.fields||[]).filter(x=>x.enabled)){let v=(document.getElementById('fiscal_'+f.key)?.value||'').trim();if(f.required&&!v){alert('Preencha o campo fiscal obrigatório: '+f.label);return null}data[f.key]=v}return{requested:true,data}}
+async function loadDrinkSettings(){
+  try{
+    const r=await fetch(PAGBANK_WORKER_URL+'/drink-settings');
+    const d=await r.json();
+    if(r.ok&&d.ok&&d.settings){
+      drinkSettings={
+        refri_brands:Array.isArray(d.settings.refri_brands)&&d.settings.refri_brands.length?d.settings.refri_brands:['Coca-Cola'],
+        juice_flavors:Array.isArray(d.settings.juice_flavors)?d.settings.juice_flavors:[]
+      };
+    }
+  }catch(e){}
+}
+async function loadDailySpecial(){
+  try{
+    const r=await fetch(PAGBANK_WORKER_URL+'/daily-special'),d=await r.json();
+    if(!r.ok||!d.ok)return;
+    const cfg=d.specials||{enabled:d.special?.enabled!==false,items:d.special?[d.special]:[]},b=document.getElementById('dailySpecialBanner');
+    const items=(cfg.items||[]).filter(x=>x.enabled!==false&&x.name).slice(0,5);
+    if(cfg.enabled===false||!items.length){b.classList.remove('show');return}
+    b.innerHTML=`<div style="grid-column:1/-1"><div class="special-kicker">🍽️ PRATOS DO DIA</div><div class="special-list">${items.map(s=>`<div class="special-card" onclick='openDailySpecial(${JSON.stringify(s).replace(/'/g,"&#39;")})'>${s.image?`<img src="${s.image}" alt="${s.name}">`:`<div class="ph">SEABRA</div>`}<div><div class="special-title">${s.name}</div><div class="desc">${s.description||''}</div><div class="special-price">${BRL(Number(s.price||0))}</div><div class="small">Toque para pedir</div></div></div>`).join('')}</div></div>`;
+    b.classList.add('show')
+  }catch(e){}
+}
+function openDailySpecial(s){
+  let x=[s.name,Number(s.price||0),s.description||'',s.image||'',''];
+  openItem(x)
+}
+
+function championDishImage(name){
+  let n=String(name||'').toLowerCase();
+  const map=[
+    ['filezinhos','img_001_filezinhos.jpg'],
+    ['alcatra acebolada','img_002_alcatra.jpg'],
+    ['parmegiana','img_003_parmegiana.jpg'],
+    ['carneiro','img_004_carneiro.jpg'],
+    ['salada tropical','img_005_salada_tropical.jpg'],
+    ['chapada diamantina','img_010_97194ef9a62ac6e0.png'],
+    ['completão','img_009_439dd6d421305c42.jpg'],
+    ['completao','img_009_439dd6d421305c42.jpg'],
+    ['cuscuz com carneiro','img_008_cuscuz_carneiro.jpg'],
+    ['omelete de frango','img_011_omelete_frango.jpg'],
+    ['omelete de carne','img_012_omelete_carne.jpg'],
+    ['tapioca de frango','img_013_tapioca_frango.jpg'],
+    ['tapioca de carne','img_014_tapioca_carne.jpg'],
+    ['x-salada','img_015_xsalada.jpg'],
+    ['x-frango','img_016_xfrango.jpg'],
+    ['x-alcatra','img_017_xalcatra.jpg'],
+    ['x-tudo','img_018_xtudo.jpg'],
+    ['sopa','img_036_sopa.png']
+  ];
+  for(const [k,v] of map)if(n.includes(k))return v;
+  for(const [cat,items] of Object.entries(data||{})){
+    for(const x of items||[])if(String(x[0]||'').toLowerCase()===n&&x[3])return firstImg(x[3])
+  }
+  return ''
+}
+
+async function loadSalesChampions(){
+  try{
+    let cfg=await fetch(PAGBANK_WORKER_URL+'/sales-champions-config').then(r=>r.json());
+    if(cfg&&cfg.ok&&cfg.config&&cfg.config.show===false){salesChampions.classList.remove('show');return}
+    let d=await fetch(PAGBANK_WORKER_URL+'/sales-champions').then(r=>r.json());
+    let a=(d.champions||[]).slice(0,3);
+    if(!a.length){salesChampions.classList.remove('show');return}
+    const medals=['🥇','🥈','🥉'];
+    salesChampions.innerHTML='<div class="special-kicker">🏆 CAMPEÕES DE VENDA</div><div class="champions-grid">'+a.map((x,i)=>{
+      let img=championDishImage(x.name||x.item_name||'');
+      return `<div class="champion-card">
+        ${img?`<img class="champion-img" src="${img}" alt="${x.name||x.item_name||'Prato'}" onerror="this.style.display='none'">`:`<div class="champion-ph">🍽️</div>`}
+        <div class="champion-medal">${medals[i]||'🏅'} ${i+1}º</div>
+        <div class="champion-name">${x.name||x.item_name||''}</div>
+      </div>`
+    }).join('')+'</div>';
+    salesChampions.classList.add('show')
+  }catch(e){console.warn('Campeões:',e)}
+}
+
+
+function merceariaImg(name){
+  let n=String(name||'').toLowerCase(),m=[
+    ['heineken','img_035_heineken_lata.png'],['cerveja','img_035_heineken_lata.png'],['refrigerante','img_037_refrigerante.png'],
+    ['água com gás','img_039_agua_com_gas.png'],['agua com gas','img_039_agua_com_gas.png'],['água sem gás','img_038_agua_sem_gas.png'],['agua sem gas','img_038_agua_sem_gas.png'],
+    ['água 1,5','img_048_agua_15l.png'],['agua 1,5','img_048_agua_15l.png'],['água de coco','img_040_agua_de_coco.png'],['agua de coco','img_040_agua_de_coco.png'],
+    ['energético','img_046_energetico.png'],['energetico','img_046_energetico.png'],['café','img_047_cafe.png'],['cafe','img_047_cafe.png'],
+    ['cocada','img_041_cocada.png'],['pé de moleque','img_042_pe_de_moleque.png'],['pe de moleque','img_042_pe_de_moleque.png'],['bala','img_043_balas.png'],
+    ['escova','img_044_kit_dental.png'],['pasta de dente','img_044_kit_dental.png'],['carregador','img_045_kit_carregamento.png'],['cabo','img_045_kit_carregamento.png']
+  ];for(const x of m)if(n.includes(x[0]))return x[1];return''
+}
+async function loadMercearia(){
+  const b=document.getElementById('merceariaBox'),sec=document.getElementById('merceariaSection');
+  try{
+    const r=await fetch(PAGBANK_WORKER_URL+'/cash-items',{cache:'no-store'}),d=await r.json();
+    if(!r.ok||!d.ok)throw new Error(d.erro||'Não foi possível carregar a mercearia.');
+    let items=(d.items||[]).filter(x=>Number(x.active??1)===1&&Number(x.public_active??1)===1),groups={};
+    for(const x of items)(groups[x.category||'Outros']??=[]).push(x);
+    if(!items.length){sec.style.display='none';return}
+    b.innerHTML=Object.entries(groups).sort((a,b)=>a[0].localeCompare(b[0],'pt-BR')).map(([cat,arr])=>`
+      <div class="mercearia-group">
+        <div class="mercearia-section-title">${cat}</div>
+        <div class="mercearia-grid">
+          ${arr.sort((a,b)=>a.name.localeCompare(b.name,'pt-BR')).map(x=>`<div class="mercearia-item" data-mercearia-key="${x.item_key}">
+            <b>${x.name}</b>
+            <div class="small">${cat}</div>
+            <div class="mercearia-price">${x.price_cents?BRL(x.price_cents/100):'Consultar'}</div>
+          </div>`).join('')}
+        </div>
+      </div>`).join('');
+    b.querySelectorAll('.mercearia-item').forEach(el=>{
+      el.onclick=()=>{let x=items.find(i=>i.item_key===el.dataset.merceariaKey);if(x)openMerceariaItem(x)}
+    });
+    sec.style.display='block';ensureMerceariaTab()
+  }catch(e){
+    console.warn('Mercearia:',e);
+    sec.style.display='block';
+    b.innerHTML='<div class="availability-note">Não foi possível carregar os itens da Mercearia agora. Atualize a página ou avise o restaurante.</div>';
+    ensureMerceariaTab()
+  }
+}
+function openMerceariaItem(x){
+  let img=merceariaImg(x.name),item=[x.name,Number(x.price_cents||0)/100,'Item de mercearia — '+(x.category||'Outros'),img,''];
+  openItem(item)
+}
+async function pagBankOrderPayload(dest,order=null){
+  const subtotal=cart.reduce((s,x)=>s+x.price,0);
+  const freight=(dest.type==='Entrega'&&dest.freight)?dest.freight.fee:0;
+  const totalFinal=subtotal+freight;
+  const referenceId=order?`SEABRA-${order.day.replace(/-/g,'')}-${orderPad(order.general_number)}`:'SEABRA-'+Date.now();
+
+  const weather=await ensureWeather();
+  return {
+    reference_id: referenceId,
+    weather,
+    fiscal:fiscalReq,
+    restaurant: 'Seabra Restaurante',
+    order_identity: order?{day:order.day,general_number:order.general_number,origin_number:order.origin_number,origin_type:order.origin_type,origin_code:order.origin_code,created_at_local:order.created_at_local}:null,
+    customer: {name: dest.name, phone: dest.phone||''},
+    destination: {
+      type: dest.type,
+      details: dest.details,
+      address: dest.address || null, meta: dest.meta||null
+    },
+    items: cart.map((x,i)=>({
+      reference_id: String(i+1),
+      name: x.name,
+      image:firstImg(x.img||''),
+      description: [
+        x.choices && x.choices.length ? 'Opções: '+x.choices.join(', ') : '',
+        x.obs ? 'Obs.: '+x.obs : ''
+      ].filter(Boolean).join(' | '),
+      quantity: 1,
+      unit_amount: Math.round(Number(x.price||0)*100)
+    })),
+    subtotal_cents: Math.round(subtotal*100),
+    freight_cents: Math.round(freight*100),
+    total_cents: Math.round(totalFinal*100),
+    currency: 'BRL',
+    return_url: window.location.origin + window.location.pathname + '?pagamento=retorno',
+    notification_url_hint: 'pagbank-webhook'
+  };
+}
+
+async function payWithPagBank(dest,order){
+  if(dest.type==='Entrega'&&!dest.freight){
+    alert('Para pagar com cartão, calcule primeiro o frete para que o PagBank receba o valor total correto.');
+    return;
+  }
+  if(!cart.length){
+    alert('Seu carrinho está vazio.');
+    return;
+  }
+
+  const btns=[...document.querySelectorAll('button')];
+  const continueBtn=btns.find(b=>b.textContent.trim()==='Continuar pedido');
+  const originalText=continueBtn?.textContent || '';
+  if(continueBtn){
+    continueBtn.disabled=true;
+    continueBtn.textContent='Abrindo PagBank...';
+  }
+
+  try{
+    const response=await fetch(PAGBANK_WORKER_URL+'/checkout',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(await pagBankOrderPayload(dest,order))
+    });
+
+    const data=await response.json().catch(()=>({}));
+
+    if(!response.ok || !data.ok){
+      throw new Error(data.message || data.erro || 'Não foi possível iniciar o pagamento no PagBank.');
+    }
+
+    const paymentUrl =
+      data.payment_url ||
+      data.checkout_url ||
+      data.url ||
+      (Array.isArray(data.links)
+        ? (data.links.find(l=>String(l.rel||'').toUpperCase()==='PAY')?.href || '')
+        : '');
+
+    if(!paymentUrl){
+      throw new Error('O PagBank não devolveu o link de pagamento.');
+    }
+
+    savePendingPagBankOrder(order,dest);
+    window.location.href=paymentUrl;
+  }catch(error){
+    alert('Pagamento por cartão indisponível no momento. '+(error?.message||'Tente novamente.'));
+  }finally{
+    if(continueBtn){
+      continueBtn.disabled=false;
+      continueBtn.textContent=originalText || 'Continuar pedido';
+    }
+  }
+}
+
+async function checkout(){
+  const selectedType=document.getElementById('orderType')?.value||'';
+  const selectedPay=document.querySelector('input[name="pay"]:checked')?.value||'';
+  if(selectedType==='Entrega'){
+    alert('Entrega fora do restaurante está temporariamente indisponível.');
+    return;
+  }
+  if(selectedPay==='Cartão PagBank'){
+    alert('Pagamento por cartão via PagBank está temporariamente indisponível.');
+    return;
+  }
+
+  const fiscalReq=getFiscalRequest();if(fiscalReq===null)return;
+  let p=document.querySelector('input[name=pay]:checked')?.value||'Pagamento na entrega';
+  let dest=getOrderDestination();
+  if(!dest) return;
+
+  if((p==='Pix direto'||p==='Cartão PagBank')&&cart.some(x=>x.consult)){
+    alert('Há item com disponibilidade e valor a confirmar no carrinho. Para pagar online, aguarde a confirmação do restaurante ou remova esse item.');
+    return;
+  }
+
+  if(p==='Pix direto'){
+    if(dest.type==='Entrega'&&!dest.freight){
+      alert('Para pagar por Pix, calcule primeiro o frete para que o QR Code seja gerado com o valor total correto.');
+      return;
+    }
+    showPixPayment(dest);
+    return;
+  }
+
+  if(p==='Cartão PagBank'){
+    if(dest.type==='Entrega'&&!dest.freight){
+      alert('Para pagar com cartão, calcule primeiro o frete para que o PagBank receba o valor total correto.');
+      return;
+    }
+    try{
+      const order=await reserveOrderIdentity(dest);
+      await payWithPagBank(dest,order);
+    }catch(error){
+      alert('Não foi possível numerar o pedido. '+(error?.message||'Tente novamente.'));
+    }
+    return;
+  }
+
+  if(dest.type==='Entrega'&&!dest.freight){
+    const ok=confirm('O frete ainda não foi calculado. Deseja enviar o pedido mesmo assim para o restaurante confirmar o valor da entrega pelo WhatsApp?');
+    if(!ok) return;
+  }
+  await sendWhats(p,dest);
+}
+
+
+async function submitOrderFast(dest,pay){
+  if(ORDER_SEQUENCE_DEMO)return demoOrderIdentity(dest);
+  const subtotal=cart.reduce((s,x)=>s+x.price,0);
+  const freight=(dest.type==='Entrega'&&dest.freight)?dest.freight.fee:0;
+  const totalFinal=subtotal+freight;
+  const payload={
+    customer:{name:dest.name,phone:dest.phone||''},
+    destination:{type:dest.type,details:dest.details,address:dest.address||null,meta:dest.meta||null},
+    weather:await ensureWeather(),
+    items:cart.map((x,i)=>({reference_id:String(i+1),image:x.img||'',name:x.name,description:[x.choices&&x.choices.length?'Opções: '+x.choices.join(', '):'',x.obs?'Obs.: '+x.obs:''].filter(Boolean).join(' | '),quantity:1,unit_amount:Math.round(Number(x.price||0)*100)})),
+    subtotal_cents:Math.round(subtotal*100),
+    freight_cents:Math.round(freight*100),
+    total_cents:Math.round(totalFinal*100),
+    fiscal:getFiscalRequest()||{requested:false,data:{}},
+    payment_method:pay
+  };
+  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),25000);
+  try{
+    const response=await fetch(PAGBANK_WORKER_URL+'/submit-order',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),signal:controller.signal});
+    const data=await response.json().catch(()=>({}));
+    if(!response.ok||!data.ok)throw new Error(data.erro||'Não foi possível registrar o pedido.');
+    return data;
+  }finally{clearTimeout(timer)}
+}
+
+async function sendWhats(pay='Pagamento na entrega',dest=null,order=null){
+  if(!dest){dest=getOrderDestination();if(!dest)return}
+  const btn=[...document.querySelectorAll('button')].find(b=>b.textContent.includes('Continuar pedido'));
+  const old=btn?.textContent;
+  if(btn){btn.disabled=true;btn.textContent='Confirmando...'}
+  try{
+    const identity=order||await submitOrderFast(dest,pay);
+    const t=buildWhatsText(pay,dest,identity);
+    showOrderConfirmation(identity,dest,pay,t,'Pedido registrado no painel interno do restaurante.');
+  }catch(error){
+    const msg=error?.name==='AbortError'?'O servidor demorou além do esperado. Aguarde alguns segundos e tente novamente.':(error?.message||'Tente novamente.');
+    alert('Não foi possível confirmar o pedido. '+msg);
+  }finally{
+    if(btn){btn.disabled=false;btn.textContent=old||'Continuar pedido'}
+  }
+}
+
+
+Promise.resolve().then(async()=>{
+  await Promise.allSettled([loadFiscalSettings(),loadDrinkSettings(),loadDailySpecial(),loadSalesChampions(),loadMercearia()]);
+});
+
+// Atualização 10/11/2026: painel interno de pedidos sem PIN temporariamente, com produção, pagamento e entrega.
+// Atualização 10/11/2026: fila sequencial diária por origem, identificação visual e confirmação para o cliente.
+// Atualização 05/11/2026: novas fotos aplicadas aos pratos correspondentes, incluindo omeletes e tapiocas.
+// Atualização 05/11/2026: consulta automática de CEP com preenchimento editável e link para Busca CEP dos Correios.
+// Atualização 05/11/2026: cotação de frete Uber Direct via /api/uber-quote, com total no pedido e fallback “frete a confirmar”.
+// Atualização 08/11/2026: Pix direto com QR Code e Copia e Cola gerados para o valor total do pedido.
+// Atualização 08/11/2026: opção Cartão pelo PagBank preparada para o Worker pagbanktoken, mantendo o token somente no Cloudflare.
+// Atualização 12/11/2026: campos Mesa/Para levar, clima, prato do dia, sopa, cerveja, campeão de vendas, observações e fotos para cozinha.
+// Atualização 11/11/2026: fotos de Chapada Diamantina e Completão reorganizadas conforme aprovação; nomes, descrições e preços preservados.
+// Atualização 10/11/2026: ponto por clique na Alcatra Acebolada, Cuscuz Completão e Extra Ovo; águas com imagens distintas; refrigerante com marca + Normal/Zero; shake no carrinho com disponibilidade/valor a confirmar.
+</script></body></html>
